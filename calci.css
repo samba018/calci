@@ -1,178 +1,88 @@
-.display{
-    margin-left: 50px;
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* General body setup */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-.name{
-    height: 20px;
-    width: 200px;
+
+/* Calculator container */
+.bll {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 25px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-.firstrow{
-    margin-top: 20px;
+
+/* Display styling */
+.display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #e7f6f2;
+    margin-bottom: 20px;
+    text-align: right;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
 }
-.secondrow{
-    margin-top: 10px;
-}
-.thirdrow{
-    margin-top: 10px;
+
+/* Row layout */
+.firstrow,
+.secondrow,
+.thirdrow,
+.fourthrow {
+    display: flex;
+    gap: 10px;
     margin-bottom: 10px;
 }
-.a7{
-    border-radius:2px;
-    font-size:20px;
-    background-color: aquamarine;
-    display: inline-block;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-    padding-top: 10px;
-}
-.a8{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a9{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.clear{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-}
-.a4{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a5{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a6{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a1{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a2{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a3{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a0{
-     border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 60px;
-    text-align: center;
-}
-.a-{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-}
-.aslash{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-}
-.aplus{
-    margin-left: 10px;
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-}
-.clac{
-    border-radius:2px;
-    background-color: aquamarine;
-    display: inline-block;
-    font-size:20px;
-    padding-top: 10px;
-    height: 40px;
-    width: 100px;
-    text-align: center;
-    margin-left: 15px;
-}
-.bll{
-    height: 300px;
-    width: 300px;
-    display: inline-block;
-    border-color: black;
-    background-color: rgba(235, 116, 185, 0.852);
+
+/* General button styling */
+button {
+    flex: 1;
+    height: 50px;
+    font-size: 18px;
+    border: none;
     border-radius: 10px;
+    background-color: #4dd0e1;
+    color: white;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+}
+
+/* Hover and active effects */
+button:hover {
+    transform: scale(1.05);
+    background-color: #26c6da;
+}
+
+button:active {
+    transform: scale(0.95);
+    background-color: #0097a7;
+}
+
+/* Special wider buttons */
+.a0,
+.aplus,
+.clac,
+.clear,
+.a-,
+.aslash {
+    flex: 2;
+}
+
+/* Optional: adjust individual button colors if needed */
+.clear {
+    background-color: #ef5350;
+}
+
+.clear:hover {
+    background-color: #e53935;
 }
